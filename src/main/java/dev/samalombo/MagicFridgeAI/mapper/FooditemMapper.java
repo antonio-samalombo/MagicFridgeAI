@@ -22,11 +22,13 @@ public class FooditemMapper {
     public FooditemDTO map(Fooditem fooditem){
 
         FooditemDTO fooditemDTO = new FooditemDTO();
-        fooditem.setId(fooditem.getId());
-        fooditem.setNome(fooditem.getNome());
-        fooditem.setCategoria(fooditem.getCategoria());
-        fooditem.setQuantidade(fooditem.getQuantidade());
-        fooditem.setValidade(fooditem.getValidade());
+
+
+        fooditemDTO.setId(fooditem.getId());
+        fooditemDTO.setNome(fooditem.getNome());
+        fooditemDTO.setCategoria(fooditem.getCategoria());
+        fooditemDTO.setQuantidade(fooditem.getQuantidade());
+        fooditemDTO.setValidade(fooditem.getValidade());
 
         return fooditemDTO;
     }

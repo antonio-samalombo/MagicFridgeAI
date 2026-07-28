@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/food")
+@RequestMapping("food")
 public class FooditemController {
 
     private FooditemService service;
@@ -45,6 +45,12 @@ public class FooditemController {
     }
 
     //GET
+    @GetMapping("/listar")
+    public ResponseEntity<List<FooditemDTO>> listarFood(){
+        List<FooditemDTO> food = service.listarTodos();
+        return ResponseEntity.ok(food);
+    }
+
 
 
     //UPDATE
